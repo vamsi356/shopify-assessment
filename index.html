@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green T-Shirt Product Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <section>
+      <div class="product-grid">
+        <!-- Product Image -->
+        <div>
+          <img src="./Men Eagle Print Tee (1).jpg" alt="Green T-Shirt" class="product-image" id="pr">
+          <div class="img-thumbnails">
+            <img src="./Men Eagle Print Tee (2).jpg" alt="Black T-Shirt" class="img-thumbnail" onclick="mainimage(this)" id="img1">
+            <img src="./Men Eagle Print Tee.jpg" alt="Blue T-Shirt" class="img-thumbnail" onclick="mainimage(this)" id="img2">
+            <img src="./image.jpg" alt="White T-Shirt" class="img-thumbnail" onclick="mainimage(this)" id="img3">
+          </div>
+          <button class="btn" style="width:100%;max-width:100%;box-sizing:border-box;display:block;margin-top:16px;">Add to Cart</button>
+            <div style="width:80%;margin:12px auto 0 auto;box-shadow:0 2px 8px #eee;border-radius:8px;background:#fafbfc;padding:12px 16px;display:flex;align-items:center;gap:10px; height: 200px; flex-direction: column; justify-content: center;">
+            <img src="./Men Eagle Print Tee (1).jpg" alt="Mini T-Shirt" style="width:38px;height:38px;border-radius:6px;object-fit:cover;">
+            <div style="flex:1;">
+              <div style="font-size:34px;font-weight:500;">Free Returns</div>
+              <div style="font-size:22px;color:#888;">30-day hassle-free returns</div>
+
+            </div>
+            </div>
+        </div>
+        <!-- Product Info -->
+        <div>
+          <section>
+            <h3>Green Short Sleeve T-Shirt</h3>
+            <p style="color: #888; font-size: 1.2rem;">$25.00</p>
+            <!-- Size Chart Modal Trigger -->
+            <div style="display: flex; align-items: center; margin: 24px 0 12px 0; flex-wrap: wrap; justify-content: center;">
+              <div class="color-swatch" style="background-color: red;" onclick="selectcolor('red')"></div>
+              <div class="color-swatch" style="background-color: rgb(75, 74, 74);" onclick="selectcolor('black')"></div>
+              <div class="color-swatch" style="background-color: rgb(5, 92, 132);" onclick="selectcolor('blue')"></div>
+              <div class="selected-color" id="selected">selected color:None</div>
+            </div>
+            <button class="custom-btn" onclick="openModal('compareColoursModal')">Compare Colours</button>
+            <button class="btn-link" onclick="openModal('sizeChartModal')" id="vsc" title="click to view" style="text-decoration: none;color: rgb(4, 12, 241);">View Size Chart</button>
+
+            <!-- Size Chart Modal -->
+            <div class="modal" id="sizeChartModal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span class="modal-title">Size Chart</span>
+                  <button class="btn-close" onclick="closeModal('sizeChartModal')">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <table class="size-chart">
+                    <thead>
+                      <tr><th>Size</th><th>S</th><th>M</th><th>L</th><th>XL</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Chest</td><td>60</td><td>60</td><td>60</td><td>50</td></tr>
+                      <tr><td>Waist</td><td>34</td><td>30</td><td>30</td><td>XL</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn-outline" onclick="closeModal('sizeChartModal')">Close</button>
+                </div>
+              </div>
+            </div>
+            <!-- Compare Colours Modal -->
+            <div class="modal" id="compareColoursModal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span class="modal-title">Compare Colours</span>
+                  <button class="btn-close" onclick="closeModal('compareColoursModal')">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <div style="display: flex; gap: 12px; margin-bottom: 12px; justify-content: center;" id="compare-swatches">
+                    <div class="color-swatch compare-swatch" style="background-color: red;" data-color="red" data-img="./Men Eagle Print Tee (1).jpg"></div>
+                    <div class="color-swatch compare-swatch" style="background-color: rgb(75, 74, 74);" data-color="black" data-img="./Men Eagle Print Tee (2).jpg"></div>
+                    <div class="color-swatch compare-swatch" style="background-color: rgb(17, 109, 167);" data-color="blue" data-img="./Men Eagle Print Tee.jpg"></div>
+                  </div>
+                  <div style="display: flex; gap: 12px; justify-content: center;" id="compare-images"></div>
+                  <small style="color: #888;">Select two or more colours to compare.</small>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn-outline" onclick="closeModal('compareColoursModal')">Close</button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Suggestions -->
+          <section class="suggestions">
+            <div style="margin-top: 24px;">
+              <h6 style="font-size: 18px;">Pair Well With</h6>
+              <div class="pair-cards-scroll" style="display: flex; overflow-x: auto; gap: 18px; padding-bottom: 8px; scroll-snap-type: y mandatory;">
+                <div class="pair-card">
+                  <img src="./Our Gear and Style Editors Found the 12 Best Wallets for Any Man.jpg" alt="Wallet">
+                  <div class="card-body">
+                    <h6 class="card-title" style="font-size: 16px;">Wallet</h6>
+                    <p class="card-text" style="font-size: 14px;">$20.00</p>
+                    <button class="btn-outline" style="width:100%;">Add to Cart</button>
+                  </div>
+                </div>
+                <div class="pair-card" style="min-width: 180px; scroll-snap-align: start;">
+                  <img src="./Mens Sneakers Fashion Casual Running Shoes Lover Gym Shoes Light Breathe Comfort Outdoor Air ___.jpg" alt="Sneakers">
+                  <div class="card-body">
+                    <h6 class="card-title" style="font-size: 16px;">Sneakers</h6>
+                    <p class="card-text" style="font-size: 14px;">$60.00</p>
+                    <button class="btn-outline" style="width:100%;">Add to Cart</button>
+                  </div>
+                </div>
+                <div class="pair-card" style="min-width: 180px; scroll-snap-align: start;">
+                  <img src="./Grunge men's black jeans - Black _ W38.jpg" alt="Dark Jeans">
+                  <div class="card-body">
+                    <h6 class="card-title">Dark Jeans</h6>
+                    <p class="card-text">$50.00</p>
+                    <button class="btn-outline" style="width:100%;">Add to Cart</button>
+                  </div>
+                </div>
+                <div class="pair-card" style="min-width: 180px; scroll-snap-align: start;">
+                  <img src="./Coy Zip-up Chunky Knit Sweater __ Cream.jpg" alt="Cream Sweater">
+                  <div class="card-body">
+                    <h6 class="card-title">Cream Sweater</h6>
+                    <p class="card-text">$40.00</p>
+                    <button class="btn-outline" style="width:100%;">Add to Cart</button>
+                  </div>
+                </div>
+                <div class="pair-card" style="min-width: 180px; scroll-snap-align: start;">
+                  <img src="./Short Sleeve POLO Shirt (Sleeve Pocket Irregularly Cut).jpg" alt="Polo Shirt">
+                  <div class="card-body">
+                    <h6 class="card-title">Polo Shirt</h6>
+                    <p class="card-text">$35.00</p>
+                    <button class="btn-outline" style="width:100%;">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <style>
+                @media (min-width: 600px) {
+                  .pair-cards-scroll {
+                    width: 100%;
+                    max-width: 600px;
+                  }
+                }
+                .pair-cards-scroll {
+                  scrollbar-width: thin;
+                }
+                .pair-card {
+                  box-shadow: 0 2px 8px #eee;
+                  border-radius: 8px;
+                  background: #fff;
+                }
+              </style>
+              <script>
+                // Optionally, you can add JS to scroll by 1 card at a time if needed
+              </script>
+            </div>
+          </section>
+          <!-- Product Bundle Suggestion -->
+          <section>
+            <div class="bundle-card">
+              <h6 style="margin-bottom: 12px;">Buy these together</h6>
+              <div class="bundle-items">
+                <div class="bundle-item">
+                  <img src="./Men Eagle Print Tee (1).jpg" alt="T-Shirt">
+                  <span>Green Short Sleeve T-Shirt</span>
+                  <span style="color:#888; margin-left:6px;">$25.00</span>
+                </div>
+                <span class="bundle-plus">+</span>
+                <div class="bundle-item">
+                  <img src="./Our Gear and Style Editors Found the 12 Best Wallets for Any Man.jpg" alt="Wallet">
+                  <span>Wallet</span>
+                  <span style="color:#888; margin-left:6px;">$20.00</span>
+                </div>
+                <span class="bundle-plus">+</span>
+                <div class="bundle-item">
+                  <img src="./Mens Sneakers Fashion Casual Running Shoes Lover Gym Shoes Light Breathe Comfort Outdoor Air ___.jpg" alt="Sneakers">
+                  <span>Sneakers</span>
+                  <span style="color:#888; margin-left:6px;">$60.00</span>
+                </div>
+              </div>
+              <div class="bundle-footer">
+                <div>
+                  <strong>Total: </strong>
+                  <span style="font-size:1.2rem;">$105.00</span>
+                </div>
+                <button class="btn">Add Bundle to Cart</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <!-- Tabs -->
+    <section class="container" style="margin-top:0;">
+      <ul class="nav-tabs" id="productTabs">
+        <li><button class="nav-link active" data-tab="desc">Description</button></li>
+        <li><button class="nav-link" data-tab="info">Product Information</button></li>
+        <li><button class="nav-link" data-tab="shipping">Shipping Details</button></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="desc">
+            <div style="width: 100%; padding: 15px; background-color: #fff; font-family: Arial, sans-serif; font-size: 16px; color: #333; line-height: 1.6; border-bottom: 1px solid #ddd;">
+  <h2 style="margin-top: 0;font-size: 12px;">Product Description</h2>
+  <p>
+    Step into effortless style with our Men’s Premium Cotton T-Shirt — tailored for comfort, durability, and a timeless look. Crafted from 100% combed cotton, this t-shirt is soft on the skin and breathable, making it perfect for everyday wear. Whether you're heading to work, hitting the gym, or relaxing on the weekend, this tee offers the versatility and fit you need to stay comfortable and confident all day.
+  </p>
+</div>
+        </div>
+        <div class="tab-pane" id="info">
+          <h5>Product Information</h5>
+          <p><strong>Material:</strong> 100% Combed Cotton</p>
+          <p><strong>Fit:</strong> Regular Fit</p>
+          <p><strong>Care Instructions:</strong> Machine wash cold, tumble dry low</p>
+          <p><strong>Available Sizes:</strong> S, M, L, XL</p>
+          <p><strong>Available Colors:</strong> Red, Black, Blue</p>
+        </div>
+        <div class="tab-pane" id="shipping">
+          <h5>Shipping Details</h5>
+          <p>We offer free shipping on orders over $50. Standard shipping takes 3-5 business days. Expedited shipping options are available at checkout.</p>
+          <p>For international orders, please allow 7-14 business days for delivery. Customs fees may apply based on your location.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Related Products -->
+    <section class="related-products">
+      <h5 style="margin-bottom: 18px;font-size: 16px;">Related Products</h5>
+      <div class="related-grid">
+        <div class="related-card">
+          <img src="./Coy Zip-up Chunky Knit Sweater __ Cream.jpg" alt="Cream Sweater">
+          <div class="card-body">
+            <h6 class="card-title">Cream Sweater <span class="badge bg-info">New</span></h6>
+            <p class="card-text">$40.00</p>
+            <button class="btn-outline" style="width:100%;">Add to Cart</button>
+          </div>
+        </div>
+        <div class="related-card">
+          <img src="./Short Sleeve POLO Shirt (Sleeve Pocket Irregularly Cut).jpg" alt="Black Jeans">
+          <div class="card-body">
+            <h6 class="card-title">Black Jeans <span class="badge bg-success">Popular</span></h6>
+            <p class="card-text">$50.00</p>
+            <button class="btn-outline" style="width:100%;">Add to Cart</button>
+          </div>
+        </div>
+        <div class="related-card">
+          <img src="./Mens Sneakers Fashion Casual Running Shoes Lover Gym Shoes Light Breathe Comfort Outdoor Air ___.jpg" alt="Sneakers">
+          <div class="card-body">
+            <h6 class="card-title">Sneakers</h6>
+            <p class="card-text">$60.00</p>
+            <button class="btn-outline" style="width:100%;">Add to Cart</button>
+          </div>
+        </div>
+        <div class="related-card">
+          <img src="./Our Gear and Style Editors Found the 12 Best Wallets for Any Man.jpg" alt="Wallet">
+          <div class="card-body">
+            <h6 class="card-title">Wallet</h6>
+            <p class="card-text">$20.00</p>
+            <button class="btn-outline" style="width:100%;">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+ 
+  <script src="main.js"></script>
+   
+  </script>
+</body>
+</html>
